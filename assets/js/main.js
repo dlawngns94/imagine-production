@@ -306,13 +306,12 @@
             <h2 class="h-section">상상하고 계신 하루를\n들려주세요</h2>
             <p class="lead">문의를 남겨주시면 영업일 기준 1~2일 이내에 연락드리겠습니다.</p>
             <ul class="info-list">
-              <li><span>TEL</span><a href="tel:${esc(site.tel.replace(/[^0-9+]/g, ""))}">${esc(site.tel)}</a></li>
+                ${site.tel ? `<li><span>TEL</span><a href="tel:${esc(site.tel.replace(/[^0-9+]/g, ""))}">${esc(site.tel)}</a></li>` : ""}
               <li><span>EMAIL</span><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></li>
               <li><span>HOURS</span><span>${esc(site.hours)}</span></li>
               <li><span>ADDRESS</span><span>${esc(site.address)}</span></li>
               ${site.instagram ? `<li><span>SNS</span><a href="${esc(site.instagram)}" target="_blank" rel="noopener">Instagram</a></li>` : ""}
             </ul>
-            <div class="map">MAP — 지도 삽입 위치 (README 참고)</div>
           </div>
           <form class="form reveal" novalidate>
             <div class="field"><label for="f-name">이름 <em>*</em></label><input id="f-name" name="name" required autocomplete="name"></div>
