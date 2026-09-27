@@ -65,7 +65,7 @@
           <span>대표 ${esc(site.ceo)}</span>
           <span>사업자등록번호 ${esc(site.businessNumber)}</span><br>
           <span>${esc(site.address)}</span>
-          <span>TEL ${esc(site.tel)}</span>
+          ${site.tel ? `<span>TEL ${esc(site.tel)}</span>` : ""}
           <span>${esc(site.email)}</span>
         </div>
         <div class="footer-copy">© ${new Date().getFullYear()} ${esc(site.companyName)}. All rights reserved.</div>
