@@ -15,7 +15,7 @@
     { "no": "03", "title": "Record", "text": "사진과 영상으로 오래 꺼내 볼 수 있는 기록을 남깁니다." }
   ],
   "services": [
-    { "title": "Wedding Direction", "text": "야외·전통 공간 웨딩 기획 및 현장 연출", "image": "assets/images/Wedding Direction.jpg" },
+    { "title": "Wedding Direction", "text": "야외·전통 공간 웨딩 기획 및 현장 연출", "image": "assets/images/WeddingDirection.jpg" },
     { "title": "Photo & Snap", "text": "본식 스냅, 가족사진", "image": "assets/images/PhotoSnap.jpg" },
     { "title": "Film", "text": "웨딩 필름, 행사 스케치, 브랜드 영상", "image": "assets/images/Film.jpg" },
   ],
