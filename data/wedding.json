@@ -6,7 +6,7 @@
       "id": "small",
       "name": "SMALL",
       "title": "스몰 웨딩",
-      "price": 3500000,
+      "price": "상담 후 결정",
       "guests": "하객 50명 이하",
       "image": "assets/images/ph-wedding-3.jpg",
       "includes": ["예식 공간 4시간 대관", "기본 꽃장식 및 버진로드", "본식 스냅 (원본 전체 + 보정 30컷)", "현장 진행 매니저 1인"]
@@ -15,7 +15,7 @@
       "id": "classic",
       "name": "CLASSIC",
       "title": "클래식 웨딩",
-      "price": 6500000,
+      "price": "상담 후 결정",
       "guests": "하객 100명 이하",
       "image": "assets/images/ph-wedding-2.jpg",
       "featured": true,
@@ -25,19 +25,19 @@
       "id": "premium",
       "name": "PREMIUM",
       "title": "프리미엄 웨딩",
-      "price": 11000000,
+      "price": "상담 후 결정",
       "guests": "하객 150명 이하",
       "image": "assets/images/ph-wedding-1.jpg",
       "includes": ["예식 공간 종일 대관", "맞춤 공간 연출 및 조명", "본식 스냅 2인 + 웨딩 필름 풀버전", "사회자 · 축가 · 현장 매니저 3인", "리허설 촬영 및 앨범 제작"]
     }
   ],
   "options": [
-    { "id": "film", "name": "웨딩 필름 (풀버전)", "price": 1200000 },
-    { "id": "rehearsal", "name": "리허설 촬영", "price": 800000 },
-    { "id": "hanbok", "name": "전통 폐백 · 한복 연출", "price": 900000 },
-    { "id": "catering", "name": "케이터링 (1인 기준 × 50명)", "price": 2500000 },
-    { "id": "album", "name": "프리미엄 앨범 추가", "price": 450000 },
-    { "id": "drone", "name": "드론 촬영", "price": 400000 }
+    { "id": "film", "name": "웨딩 필름 (풀버전)", "price": "상담 후 결정" },
+    { "id": "rehearsal", "name": "리허설 촬영", "price": "상담 후 결정" },
+    { "id": "hanbok", "name": "전통 폐백 · 한복 연출", "price": "상담 후 결정" },
+    { "id": "catering", "name": "케이터링 (1인 기준 × 50명)", "price": "상담 후 결정" },
+    { "id": "album", "name": "프리미엄 앨범 추가", "price": "상담 후 결정" },
+    { "id": "drone", "name": "드론 촬영", "price": "상담 후 결정" }
   ],
   "process": [
     { "step": "01", "title": "상담 예약", "text": "전화 또는 문의 양식으로 희망 일정을 알려주세요." },
