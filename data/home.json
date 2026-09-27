@@ -19,7 +19,7 @@
     "text": "IMAGINE PRODUCTION은 웨딩·행사·영상 콘텐츠를 기획하고 제작하는 크리에이티브 프로덕션입니다. 가장 특별한 하루가 가장 자연스러운 모습으로 기억되도록, 처음 상담부터 마지막 결과물까지 섬세하게 준비합니다."
   },
   "features": [
-    { "title": "BRAND", "sub": "회사 소개", "image": "assets/images/brand-main.jpg", "href": "brand.html" },
+    { "title": "BRAND", "sub": "회사 소개", "image": "assets/images/brand-main.JPG", "href": "brand.html" },
     { "title": "WEDDING", "sub": "웨딩 상품 · 견적 안내", "image": "assets/images/ph-wedding-1.jpeg", "href": "wedding.html" },
     { "title": "CONTACT", "sub": "상담 문의", "image": "assets/images/contact-main.jpeg", "href": "contact.html" }
   ]
