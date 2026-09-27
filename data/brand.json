@@ -1,0 +1,28 @@
+{
+  "hero": { "image": "assets/images/brand-pavilion.jpg", "title": "BRAND", "sub": "IMAGINE PRODUCTION을 소개합니다" },
+  "story": {
+    "eyebrow": "OUR STORY",
+    "title": "상상하는 모든 장면을\n현실로 연출합니다",
+    "paragraphs": [
+      "IMAGINE PRODUCTION은 한 사람의 하루, 한 브랜드의 순간을 가장 그답게 담아내는 일을 합니다.",
+      "전통 공간에서의 스몰웨딩부터 기업 행사, 브랜드 영상까지 — 기획·연출·촬영·편집을 하나의 팀이 책임지고 진행합니다."
+    ],
+    "image": "assets/images/brand-forest.jpg"
+  },
+  "values": [
+    { "no": "01", "title": "Imagine", "text": "고객의 이야기를 먼저 듣고, 그 안에서 장면을 상상합니다." },
+    { "no": "02", "title": "Direct", "text": "공간·동선·빛까지 하루 전체를 하나의 연출로 설계합니다." },
+    { "no": "03", "title": "Record", "text": "사진과 영상으로 오래 꺼내 볼 수 있는 기록을 남깁니다." }
+  ],
+  "services": [
+    { "title": "Wedding Direction", "text": "야외·전통 공간 웨딩 기획 및 현장 연출", "image": "assets/images/ph-wedding-2.jpg" },
+    { "title": "Photo & Snap", "text": "본식 스냅, 가족사진, 프로필 촬영", "image": "assets/images/ph-wedding-3.jpg" },
+    { "title": "Film", "text": "웨딩 필름, 행사 스케치, 브랜드 영상", "image": "assets/images/ph-film.jpg" },
+    { "title": "Studio & Event", "text": "기업·단체 행사 기획 및 운영", "image": "assets/images/ph-studio.jpg" }
+  ],
+  "history": [
+    { "year": "2026", "text": "IMAGINE PRODUCTION 공식 홈페이지 오픈" },
+    { "year": "2025", "text": "전통 공간 웨딩 프로그램 운영 시작" },
+    { "year": "2024", "text": "IMAGINE PRODUCTION 설립" }
+  ]
+}
