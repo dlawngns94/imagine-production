@@ -60,7 +60,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   white-space: pre-line;
   letter-spacing: -.01em;
 }
-.lead { color: var(--ink-soft); font-size: 17px; max-width: 900px; }
+.lead { color: var(--ink-soft); font-size: 17px; max-width: 900px; white-space: pre-line; }
 .center { text-align: center; }
 .center .lead { margin-left: auto; margin-right: auto; }
 
