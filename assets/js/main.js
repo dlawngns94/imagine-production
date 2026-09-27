@@ -10,7 +10,7 @@
   const app = document.getElementById("app");
 
   /* ---------- helpers ---------- */
-  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])).replace(/\n/g, "<br>");
   const won = (n) => Number(n || 0).toLocaleString("ko-KR");
   const getJSON = (name) =>
     fetch(`data/${name}.json`, { cache: "no-cache" }).then((r) => {
