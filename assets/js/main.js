@@ -297,7 +297,7 @@
   /* ---------- CONTACT ---------- */
   async function renderContact(site) {
     app.innerHTML = `
-      ${pageHero({ image: "assets/images/ph-contact.jpg", title: "CONTACT", sub: "편하게 문의해 주세요" })}
+      ${pageHero({ image: "assets/images/CONTACTMAIN.jpg", title: "CONTACT", sub: "편하게 문의해 주세요" })}
       <section class="section">
         <div class="container contact-grid">
           <div class="reveal">
