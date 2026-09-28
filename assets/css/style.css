@@ -318,5 +318,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
    /* 상단 배경 사진 보이는 위치 (0% = 맨 위, 50% = 가운데, 100% = 맨 아래) */
    body[data-page="contact"] .page-hero img { object-position: center 70%; }
-   body[data-page="wedding"] .page-hero img { object-position: center 10%; }
+   body[data-page="wedding"] .page-hero { height: 75vh; min-height: 480px; }
+   body[data-page="wedding"] .page-hero img { object-position: center 65%; }
 
