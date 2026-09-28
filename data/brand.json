@@ -17,8 +17,7 @@
   "services": [
     { "title": "Wedding Direction", "text": "야외·전통 공간 웨딩 기획 및 현장 연출", "image": "assets/images/WeddingDirection.jpg" },
     { "title": "Photo & Snap", "text": "본식 스냅, 가족사진", "image": "assets/images/PhotoSnap.jpg" },
-    { "title": "Film", "text": "웨딩 필름, 행사 스케치, 브랜드 영상", "image": "assets/images/Film.jpg" },
-    { "title": "Studio & Event", "text": "기업·단체 행사 기획 및 운영", "image": "assets/images/ph-studio.jpg" }
+    { "title": "Film", "text": "웨딩 필름, 행사 스케치, 브랜드 영상", "image": "assets/images/Film.jpg" }
   ],
   "history": [
     { "year": "2026", "text": "IMAGINE PRODUCTION 공식 홈페이지 오픈" },
