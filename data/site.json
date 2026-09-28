@@ -10,7 +10,7 @@
   "kakao": "",
   "tel": "",
   "instagram": "https://www.instagram.com/imagine_and_?stkn=MXhhd25wdjU0NzB0bA==",
-  "contactFormEndpoint": "",
+  "contactFormEndpoint": "https://formspree.io/f/mjykpdkp",
   "menu": [
     { "label": "HOME", "href": "index.html" },
     { "label": "BRAND", "href": "brand.html" },
