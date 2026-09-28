@@ -217,7 +217,7 @@
                   <span class="pkg__guests">${esc(p.guests)}</span>
                   <div class="pkg__divider"></div>
                   <ul>${p.includes.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
-                   <a class="btn" href="contact.html?type=wedding">견적 문의하기</a>
+                  <a class="btn" href="#estimate" data-pick="${esc(p.id)}">견적 문의하기</a>
                 </div>
               </article>`
               )
