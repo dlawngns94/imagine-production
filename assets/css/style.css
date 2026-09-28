@@ -322,10 +322,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 body[data-page="wedding"] .page-hero img {
   inset: auto;
-  left: 50%;
-  top: 50%;
-  width: 60%;
-  height: 60%;
+  left: 80%;
+  top: 80%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
-  transform: translate(-20%, -20%);
+  transform: translate(-50%, -50%);
 }
