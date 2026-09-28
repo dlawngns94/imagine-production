@@ -215,9 +215,8 @@
                   <span class="pkg__name">${esc(p.name)}</span>
                   <h3 class="pkg__title">${esc(p.title)}</h3>
                   <span class="pkg__guests">${esc(p.guests)}</span>
-                  <div class="pkg__price">${won(p.price)}<small>원~</small></div>
                   <ul>${p.includes.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
-                  <a class="btn ${p.featured ? "btn--solid" : ""}" href="#estimate" data-pick="${esc(p.id)}">견적 계산하기</a>
+                  <a class="btn ${p.featured ? "btn--solid" : ""}" href="#estimate" data-pick="${esc(p.id)}">견적 문의하기</a>
                 </div>
               </article>`
               )
