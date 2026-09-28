@@ -230,7 +230,7 @@
         <div class="container">
           <p class="eyebrow reveal">ESTIMATE</p>
           <h2 class="h-section reveal">예상 견적 문의</h2>
-          <p class="lead reveal">패키지와 추가 옵션을 선택하여 문의주시면 상담을 통해 안내드립니다..</p>
+          <p class="lead reveal">원하시는 패키지와 추가 옵션을 선택해 문의해 주시면 맞춤 견적을 안내드립니다.</p>
           <div class="estimate">
             <div>
               <div class="estimate__group">
@@ -238,23 +238,22 @@
                 ${d.packages
                   .map(
                     (p, i) => `
-                  <label class="choice"><span><input type="radio" name="pkg" value="${esc(p.id)}" ${p.featured || (!d.packages.some((x) => x.featured) && i === 0) ? "checked" : ""}>${esc(p.title)} (${esc(p.name)})</span><span class="amt">${won(p.price)}원</span></label>`
+                  <label class="choice"><span><input type="radio" name="pkg" value="${esc(p.id)}" ${p.featured || (!d.packages.some((x) => x.featured) && i === 0) ? "checked" : ""}>${esc(p.title)} (${esc(p.name)})</span></label>`
                   )
                   .join("")}
               </div>
               <div class="estimate__group">
                 <h3>추가 옵션</h3>
                 ${d.options
-                  .map((o) => `<label class="choice"><span><input type="checkbox" name="opt" value="${esc(o.id)}">${esc(o.name)}</span><span class="amt">+${won(o.price)}원</span></label>`)
+                  .map((o) => `<label class="choice"><span><input type="checkbox" name="opt" value="${esc(o.id)}">${esc(o.name)}</span></label>`)
                   .join("")}
               </div>
             </div>
             <aside class="summary" aria-live="polite">
               <h3>ESTIMATE</h3>
               <div class="summary__rows"></div>
-              <div class="summary__total"><span>예상 합계</span><strong class="summary__sum">0</strong></div>
-              <small>VAT 별도 · 실제 견적은 상담 후 확정됩니다.</small>
-              <a class="btn summary__cta" href="contact.html">이 견적으로 상담 신청</a>
+              <small>선택하신 내용은 문의 양식에 자동으로 입력됩니다.</small>
+              <a class="btn summary__cta" href="contact.html">선택한 내용으로 견적 문의</a>
             </aside>
           </div>
         </div>
@@ -271,7 +270,6 @@
       </section>`;
 
     const rows = app.querySelector(".summary__rows");
-    const sum = app.querySelector(".summary__sum");
     const cta = app.querySelector(".summary__cta");
     function calc() {
       const pid = app.querySelector('input[name="pkg"]:checked')?.value;
@@ -279,9 +277,8 @@
       const opts = [...app.querySelectorAll('input[name="opt"]:checked')].map((el) => d.options.find((o) => o.id === el.value));
       const total = (pkg?.price || 0) + opts.reduce((a, o) => a + o.price, 0);
       rows.innerHTML =
-        (pkg ? `<div class="summary__row"><span>${esc(pkg.title)}</span><span>${won(pkg.price)}원</span></div>` : "") +
-        opts.map((o) => `<div class="summary__row"><span>${esc(o.name)}</span><span>+${won(o.price)}원</span></div>`).join("");
-      sum.textContent = `${won(total)}원`;
+        (pkg ? `<div class="summary__row"><span>${esc(pkg.title)}</span></div>` : "") +
+        opts.map((o) => `<div class="summary__row"><span>${esc(o.name)}</span></div>`).join("");
       const q = new URLSearchParams({ type: "wedding", pkg: pid || "", opt: opts.map((o) => o.id).join(",") });
       cta.href = `contact.html?${q}`;
     }
@@ -348,9 +345,9 @@
         const opts = (q.get("opt") || "").split(",").filter(Boolean).map((id) => w.options.find((o) => o.id === id)).filter(Boolean);
         const total = (pkg?.price || 0) + opts.reduce((a, o) => a + o.price, 0);
         form.message.value =
-          `[선택한 견적]\n- 패키지: ${pkg ? `${pkg.title} (${won(pkg.price)}원)` : "-"}\n` +
+          `[선택한 견적]\n- 패키지: ${pkg ? pkg.title : "-"}\n` +
           (opts.length ? `- 옵션: ${opts.map((o) => o.name).join(", ")}\n` : "") +
-          `- 예상 합계: ${won(total)}원 (VAT 별도)\n\n추가 요청사항:\n`;
+           `\n추가 요청사항:\n`;
       } catch (e) { /* ignore */ }
     }
 
