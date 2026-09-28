@@ -302,4 +302,5 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .footer-nav { flex-wrap: wrap; gap: 16px 24px; }
   .footer-info span { display: block; }
   .footer-info span + span::before { content: none; }
+  .pkg__divider { margin: 24px 0; border-bottom: 1px solid var(--line); }
 }
