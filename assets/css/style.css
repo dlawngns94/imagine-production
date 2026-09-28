@@ -303,4 +303,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .footer-info span { display: block; }
   .footer-info span + span::before { content: none; }
   .pkg__divider { margin: 24px 0; border-bottom: 1px solid var(--line); }
+
+  .qty { display: inline-flex; align-items: center; border: 1px solid var(--line); background: var(--white); flex: none; }
+  .qty button { width: 34px; height: 34px; border: 0; background: transparent; cursor: pointer; font-size: 16px; line-height: 1; }
+  .qty button:hover { background: var(--bg-alt); }
+  .qty input { width: 46px; border: 0; padding: 0; text-align: center; background: transparent; -moz-appearance: textfield; font-variant-numeric: tabular-nums; }
+  .qty input::-webkit-outer-spin-button, .qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .qty > span { font-size: 14px; color: var(--ink-soft); padding-right: 4px; }
 }
