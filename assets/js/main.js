@@ -229,8 +229,8 @@
       <section class="section section--alt" id="estimate">
         <div class="container">
           <p class="eyebrow reveal">ESTIMATE</p>
-          <h2 class="h-section reveal">예상 견적 계산</h2>
-          <p class="lead reveal">패키지와 추가 옵션을 선택하면 예상 금액을 바로 확인할 수 있습니다.</p>
+          <h2 class="h-section reveal">예상 견적 문의</h2>
+          <p class="lead reveal">패키지와 추가 옵션을 선택하여 문의주시면 상담을 통해 안내드립니다..</p>
           <div class="estimate">
             <div>
               <div class="estimate__group">
