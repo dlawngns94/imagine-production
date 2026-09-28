@@ -320,12 +320,3 @@ button, input, select, textarea { font: inherit; color: inherit; }
    body[data-page="contact"] .page-hero img { object-position: center 70%; }
    body[data-page="wedding"] .page-hero img { object-position: center 10%; }
 
-body[data-page="wedding"] .page-hero img {
-  inset: auto;
-  left: 80%;
-  top: 80%;
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
-}
