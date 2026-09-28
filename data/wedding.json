@@ -35,7 +35,7 @@
     { "id": "film", "name": "웨딩 필름 (풀버전)", "price": "" },
     { "id": "rehearsal", "name": "리허설 촬영", "price": "" },
     { "id": "hanbok", "name": "전통 폐백 · 한복 연출", "price": "" },
-    { "id": "catering", "name": "케이터링 (1인 기준 × 50명)", "price": "" },
+        { "id": "catering", "name": "케이터링", "price": 0, "qty": { "unit": "명", "min": 10, "max": 500, "step": 10, "default": 50 } },
     { "id": "album", "name": "프리미엄 앨범 추가", "price": "" },
     { "id": "drone", "name": "드론 촬영", "price": "" }
   ],
