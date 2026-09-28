@@ -302,6 +302,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .footer-nav { flex-wrap: wrap; gap: 16px 24px; }
   .footer-info span { display: block; }
   .footer-info span + span::before { content: none; }
+}
   .pkg__divider { margin: 24px 0; border-bottom: 1px solid var(--line); }
 
    /*-----20260928 견적문의 내리기------*/
@@ -312,5 +313,5 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .choice .qty input:focus { outline: none; color: var(--accent); }
   .choice .qty input::-webkit-outer-spin-button, .choice .qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   .choice .qty > span { font-size: 15px; color: var(--ink-soft); margin-right: 6px; }
-  #estimate { scroll-margin-top: var(--header-h); }
+  #estimate { scroll-margin-top: var(--header-h); 
 }
