@@ -245,7 +245,7 @@
               <div class="estimate__group">
                 <h3>추가 옵션</h3>
                 ${d.options
-                  .map((o) => `<label class="choice"><span><input type="checkbox" name="opt" value="${esc(o.id)}">${esc(o.name)}</span></label>`)
+                  .map((o) => `<label class="choice"><span><input type="checkbox" name="opt" value="${esc(o.id)}">${esc(o.name)}</span>${o.qty ? `<span class="qty"><button type="button" data-step="-1" data-for="${esc(o.id)}" aria-label="줄이기">−</button><input type="number" data-qty="${esc(o.id)}" value="${o.qty.default}" min="${o.qty.min}" max="${o.qty.max}" step="${o.qty.step}" inputmode="numeric"><span>${esc(o.qty.unit)}</span><button type="button" data-step="1" data-for="${esc(o.id)}" aria-label="늘리기">+</button></span>` : ""}</label>`)
                   .join("")}
               </div>
             </div>
@@ -274,7 +274,7 @@
     function calc() {
       const pid = app.querySelector('input[name="pkg"]:checked')?.value;
       const pkg = d.packages.find((p) => p.id === pid);
-      const opts = [...app.querySelectorAll('input[name="opt"]:checked')].map((el) => d.options.find((o) => o.id === el.value));
+      const opts = [...app.querySelectorAll('input[name="opt"]:checked')].map((el) => { const o = d.options.find((x) => x.id === el.value); const n = app.querySelector(`[data-qty="${o.id}"]`)?.value; return { ...o, name: n ? `${o.name} ${n}${o.qty.unit}` : o.name, id: n ? `${o.id}:${n}` : o.id }; });
       const total = (pkg?.price || 0) + opts.reduce((a, o) => a + o.price, 0);
       rows.innerHTML =
         (pkg ? `<div class="summary__row"><span>${esc(pkg.title)}</span></div>` : "") +
@@ -283,6 +283,8 @@
       cta.href = `contact.html?${q}`;
     }
     app.querySelectorAll(".estimate input").forEach((el) => el.addEventListener("change", calc));
+    app.querySelectorAll("[data-step]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); const inp = app.querySelector(`[data-qty="${b.dataset.for}"]`); const o = d.options.find((x) => x.id === b.dataset.for).qty; inp.value = Math.min(o.max, Math.max(o.min, (+inp.value || o.default) + (+b.dataset.step) * o.step)); app.querySelector(`input[name="opt"][value="${b.dataset.for}"]`).checked = true; calc(); }));
+    app.querySelectorAll("[data-qty]").forEach((inp) => inp.addEventListener("input", () => { app.querySelector(`input[name="opt"][value="${inp.dataset.qty}"]`).checked = true; calc(); }));
     app.querySelectorAll("[data-pick]").forEach((btn) =>
       btn.addEventListener("click", () => {
         const r = app.querySelector(`input[name="pkg"][value="${btn.dataset.pick}"]`);
@@ -342,7 +344,7 @@
       try {
         const w = await getJSON("wedding");
         const pkg = w.packages.find((p) => p.id === q.get("pkg"));
-        const opts = (q.get("opt") || "").split(",").filter(Boolean).map((id) => w.options.find((o) => o.id === id)).filter(Boolean);
+        const opts = (q.get("opt") || "").split(",").filter(Boolean).map((t) => { const [id, n] = t.split(":"); const o = w.options.find((x) => x.id === id); return o && { ...o, name: n ? `${o.name} ${n}${o.qty?.unit || ""}` : o.name }; }).filter(Boolean);
         const total = (pkg?.price || 0) + opts.reduce((a, o) => a + o.price, 0);
         form.message.value =
           `[선택한 견적]\n- 패키지: ${pkg ? pkg.title : "-"}\n` +
