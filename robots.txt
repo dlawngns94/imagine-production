@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://www.imagineproduction.co.kr/sitemap.xml
+Sitemap: https://www.imagineproduction.co.kr/sitemap.xml
